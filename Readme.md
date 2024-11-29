@@ -1,6 +1,6 @@
-# LeetCode Solutions in Go
+# LeetCode Boilerplate in Go
 
-This repository contains "boilerplate" code for solving LeetCode problems using Go (Golang). Each problem is organized into its own package, containing a function template and corresponding test cases.
+This repository contains "**boilerplate**" code for solving LeetCode problems using Go (Golang). Each problem is organized into its own package, containing a function template and corresponding test cases.
 
 ## Directory Structure
 
