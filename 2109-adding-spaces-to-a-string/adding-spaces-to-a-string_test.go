@@ -40,48 +40,39 @@ func TestAddSpaces(t *testing.T) {
 		t.Errorf("Test case 4 failed: expected %q, got %q", expected, result)
 	}
 
-	// Test case 5: Spaces at the end of the string.
-	// s = "endspacing"
-	// spaces = []int{10}
-	// expected = "endspacing "
-	// result = addSpaces(s, spaces)
-	// if result != expected {
-	// 	t.Errorf("Test case 5 failed: expected %q, got %q", expected, result)
-	// }
-
-	// Test case 6: Only one space added, at the start.
+	// Test case 5: Only one space added, at the start.
 	s = "single"
 	spaces = []int{0}
 	expected = " single"
 	result = addSpaces(s, spaces)
 	if result != expected {
-		t.Errorf("Test case 6 failed: expected %q, got %q", expected, result)
+		t.Errorf("Test case 5 failed: expected %q, got %q", expected, result)
 	}
 
-	// Test case 7: Empty string.
+	// Test case 6: Empty string.
 	s = ""
 	spaces = []int{}
 	expected = ""
 	result = addSpaces(s, spaces)
 	if result != expected {
-		t.Errorf("Test case 7 failed: expected %q, got %q", expected, result)
+		t.Errorf("Test case 6 failed: expected %q, got %q", expected, result)
 	}
 
-	// Test case 8: Single character string with space.
+	// Test case 7: Single character string with space.
 	s = "x"
 	spaces = []int{0}
 	expected = " x"
 	result = addSpaces(s, spaces)
 	if result != expected {
-		t.Errorf("Test case 9 failed: expected %q, got %q", expected, result)
+		t.Errorf("Test case 7 failed: expected %q, got %q", expected, result)
 	}
 
-	// Test case 9: Large string with random spaces.
+	// Test case 8: Large string with random spaces.
 	s = "largeexampleteststring"
 	spaces = []int{5, 12, 16}
 	expected = "large example test string"
 	result = addSpaces(s, spaces)
 	if result != expected {
-		t.Errorf("Test case 10 failed: expected %q, got %q", expected, result)
+		t.Errorf("Test case 8 failed: expected %q, got %q", expected, result)
 	}
 }
