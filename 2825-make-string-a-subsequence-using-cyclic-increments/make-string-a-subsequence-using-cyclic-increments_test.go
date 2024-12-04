@@ -99,4 +99,28 @@ func TestCanMakeSubsequence(t *testing.T) {
 	if result := canMakeSubsequence(str1, str2); result != expected {
 		t.Errorf("Test case 12 failed: expected %v, got %v", expected, result)
 	}
+
+	// Test case 13
+	str1 = "ff"
+	str2 = "fg"
+	expected = true
+	if result := canMakeSubsequence(str1, str2); result != expected {
+		t.Errorf("Test case 13 failed: expected %v, got %v", expected, result)
+	}
+
+	// Test case 14
+	str1 = "abc"
+	str2 = "abcd"
+	expected = false
+	if result := canMakeSubsequence(str1, str2); result != expected {
+		t.Errorf("Test case 14 failed: expected %v, got %v", expected, result)
+	}
+
+	// Test case 15
+	str1 = "om"
+	str2 = "nm"
+	expected = false
+	if result := canMakeSubsequence(str1, str2); result != expected {
+		t.Errorf("Test case 15 failed: expected %v, got %v", expected, result)
+	}
 }
