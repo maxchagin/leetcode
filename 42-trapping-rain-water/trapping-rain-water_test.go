@@ -7,13 +7,6 @@ func TestTrap(t *testing.T) {
 	var expected int
 	var result int
 
-	// Test case 0: Easy example from the problem description.
-	height = []int{1, 0, 2, 1, 0, 1, 3}
-	expected = 5
-	result = trap(height)
-	if result != expected {
-		t.Errorf("Test case 0 failed. Expected %d, got %d", expected, result)
-	}
 	// Test case 1: Basic example from the problem description.
 	height = []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
 	expected = 6
@@ -118,5 +111,12 @@ func TestTrap(t *testing.T) {
 	result = trap(height)
 	if result != expected {
 		t.Errorf("Test case 11 failed. Expected %d, got %d", expected, result)
+	}
+	// Test case 14: Easy example from the problem description.
+	height = []int{1, 0, 2, 1, 0, 1, 3}
+	expected = 5
+	result = trap(height)
+	if result != expected {
+		t.Errorf("Test case 0 failed. Expected %d, got %d", expected, result)
 	}
 }
