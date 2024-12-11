@@ -87,10 +87,17 @@ func TestMyAtoi(t *testing.T) {
 		t.Errorf("Test case 11 failed: expected %d, got %d", expected11, result)
 	}
 
-	// Test case 12: Number +1
+	// Test case 12
 	input12 := "-+12"
 	expected12 := 0
 	if result := myAtoi(input12); result != expected12 {
 		t.Errorf("Test case 12 failed: expected %d, got %d", expected12, result)
+	}
+
+	// Test case 13
+	input13 := "   +0 123"
+	expected13 := 0
+	if result := myAtoi(input13); result != expected13 {
+		t.Errorf("Test case 13 failed: expected %d, got %d", expected13, result)
 	}
 }
