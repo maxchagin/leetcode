@@ -70,4 +70,16 @@ func TestHasCycle(t *testing.T) {
 	if hasCycle(head) != false {
 		t.Errorf("Failed case 9: expected false, got true")
 	}
+
+	// Case 9: List with five elements, cycle at the start
+	head = createList([]int{1, 2, 3, 4, 5}, 0)
+	if hasCycle(head) != false {
+		t.Errorf("Failed case 9: expected true, got false")
+	}
+
+	// Case 10: List with five elements, cycle at the last element
+	head = createList([]int{1, 2, 3, 4, 5}, 4)
+	if hasCycle(head) != true {
+		t.Errorf("Failed case 10: expected true, got false")
+	}
 }
