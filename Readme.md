@@ -1,4 +1,4 @@
-# LeetCode Boilerplate in Go
+# LeetCode Boilerplate in Go with Test cases
 
 This repository contains "**boilerplate**" code for solving LeetCode problems using Go (Golang). Each problem is organized into its own package, containing a function template and corresponding test cases.
 
