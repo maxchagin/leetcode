@@ -68,15 +68,15 @@ func TestMissingInteger(t *testing.T) {
 			nums:     []int{1, 2, 4, 5, 7, 8},
 			expected: 3,
 		},
-		// Test case 11
+		// Test case 11: Complex array with repeated numbers
 		{
-			name:     "11",
+			name:     "Complex array with repeated numbers",
 			nums:     []int{13, 4, 2, 2, 3, 4, 1, 8, 3, 7, 7, 7, 1, 6, 3},
 			expected: 14,
 		},
-		// Test case 12
+		// Test case 12: Sequence starting with large number
 		{
-			name:     "12",
+			name:     "Large starting number sequence",
 			nums:     []int{38, 43, 44},
 			expected: 39,
 		},
