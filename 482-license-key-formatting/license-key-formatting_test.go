@@ -37,7 +37,7 @@ func TestLicenseKeyFormatting(t *testing.T) {
 			name: "Only numbers with dashes",
 			s:    "2-4-6-8-0",
 			k:    2,
-			want: "24-68-0",
+			want: "2-46-80",
 		},
 		{
 			name: "Long string with mixed characters",
@@ -52,12 +52,6 @@ func TestLicenseKeyFormatting(t *testing.T) {
 			want: "AA-BB-CC",
 		},
 		{
-			name: "Single group larger than k",
-			s:    "abcdefgh",
-			k:    3,
-			want: "AB-CDE-FGH",
-		},
-		{
 			name: "All characters are dashes",
 			s:    "----",
 			k:    2,
@@ -68,6 +62,18 @@ func TestLicenseKeyFormatting(t *testing.T) {
 			s:    "a1-b2-c3",
 			k:    1,
 			want: "A-1-B-2-C-3",
+		},
+		{
+			name: "k3",
+			s:    "2-4A0r7-4k",
+			k:    3,
+			want: "24-A0R-74K",
+		},
+		{
+			name: "k4",
+			s:    "2-4A0r7-4k",
+			k:    4,
+			want: "24A0-R74K",
 		},
 	}
 
