@@ -75,6 +75,12 @@ func TestLicenseKeyFormatting(t *testing.T) {
 			k:    4,
 			want: "24A0-R74K",
 		},
+		{
+			name: "k4 2",
+			s:    "a0001afds-",
+			k:    4,
+			want: "A-0001-AFDS",
+		},
 	}
 
 	for _, tt := range tests {
