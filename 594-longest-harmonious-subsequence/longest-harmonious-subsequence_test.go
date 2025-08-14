@@ -51,19 +51,17 @@ func TestFindLHS(t *testing.T) {
 		{
 			name:     "Repeated pairs with diff 1",
 			nums:     []int{1, 2, 1, 2, 1, 2, 3, 2},
-			expected: 6, // [2,1,2,1,2,1] or [2,1,2,1,2,3]
+			expected: 7, // [1, 2, 1, 2, 1, 2, 2]
 		},
 		{
 			name:     "All elements same except one",
 			nums:     []int{5, 5, 5, 5, 6},
 			expected: 5, // [5,5,5,5,6]
 		},
-
-		// Edge case: Large input (within constraints)
 		{
-			name:     "Large input with valid LHS",
-			nums:     append(make([]int, 10000), 1, 2), // 10000 identical + [1,2]
-			expected: 2,                                // Only [1,2] is valid
+			name:     "Leetcode case 1",
+			nums:     []int{1, 2, 1, 3, 0, 0, 2, 2, 1, 3, 3},
+			expected: 6,
 		},
 	}
 
